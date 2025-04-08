@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etSignUpPassword" type="id" />
+    <item name="etConfirmPassword" type="id" />
+    <item name="btnSignUp" type="id" />
+    <item name="tvGoToLogin" type="id" />
+</resources>

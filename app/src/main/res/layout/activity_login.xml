@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_night_sky"
+    android:padding="20dp">
+
+    <!-- 앱 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="루미"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- 부제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="당신만의 수면 비서"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- ID 입력 필드 -->
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="ID"
+        android:background="@drawable/edittext_background"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/light_gray"
+        android:padding="12dp"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 비밀번호 입력 필드 -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:background="@drawable/edittext_background"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/light_gray"
+        android:padding="12dp"
+        android:drawableEnd="@drawable/ic_eye"
+        android:inputType="textPassword"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 비밀번호 찾기 -->
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textSize="14sp"
+        android:textColor="@color/light_gray"
+        android:layout_gravity="end"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- 로그인 버튼 -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 회원가입 버튼 -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- OR 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or continue with"
+        android:textSize="14sp"
+        android:textColor="@color/light_gray"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 소셜 로그인 아이콘 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btnFacebook"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_facebook"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/btnApple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_apple"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/btnGoogle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_google"/>
+    </LinearLayout>
+
+</LinearLayout>

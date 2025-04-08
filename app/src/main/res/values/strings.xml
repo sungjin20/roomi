@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Roomi</string>
+    <string-array name="days_array">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+    <string name="select_day_prompt">요일 선택</string>
+</resources>

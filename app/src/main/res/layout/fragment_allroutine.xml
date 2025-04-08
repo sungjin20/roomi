@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전체 루틴"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:padding="20dp" />
+
+    <!-- 요일 선택 (수정된 부분) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button android:id="@+id/btnAll" android:text="All" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnSun" android:text="S" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnMon" android:text="M" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnTue" android:text="T" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnWed" android:text="W" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnThu" android:text="T" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnFri" android:text="F" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnSat" android:text="S" style="@style/DayButton"
+            android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- 루틴 추가 버튼 -->
+    <Button
+        android:id="@+id/btnAddRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="루틴 추가"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_margin="10dp" />
+
+    <!-- 루틴 리스트 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp" />
+
+</LinearLayout>

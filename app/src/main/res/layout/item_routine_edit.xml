@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:layout_margin="8dp">
+
+    <!-- 상단 버튼 (삭제, 변경) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="8dp">
+        <Button
+            android:id="@+id/btnEditRoutine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="변경" />
+        <Button
+            android:id="@+id/btnDeleteRoutine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tvRoutineName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="루틴 제목"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvRoutineTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="루틴 시간"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRoutineLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="루틴 장소"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="해야하는것 칸"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="50" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="지켜야하는 것 칸/tip"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/btnRoutineInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_question_mark_24"
+            android:contentDescription="루틴 정보" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnRemoveRoutine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이건 뺄래요" />
+    </LinearLayout>
+</LinearLayout>

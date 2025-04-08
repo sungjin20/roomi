@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309484261216",
+    "project_id": "roomi-c218d",
+    "storage_bucket": "roomi-c218d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309484261216:android:0e186397cbbf3de38d9805",
+        "android_client_info": {
+          "package_name": "com.example.roomi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnyPY1jxD2qgMnjU-8lN5KV6uNcH0945c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

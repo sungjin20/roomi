@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="홈"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_allroutine"
+        android:icon="@drawable/ic_allroutine"
+        android:title="전체 루틴"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="설정"
+        app:showAsAction="ifRoom"/>
+</menu>

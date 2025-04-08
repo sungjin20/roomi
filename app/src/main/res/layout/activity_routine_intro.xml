@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 수면 루틴 만들기"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="루틴 만들기에 앞서 여러분에게 적합한 루틴을 만들기 위해 몇 가지 질문을 드릴게요.\n\n여러분에게 가장 맞는 루틴을 만들기 위함이나, 성실하게 답변해 주세요!"
+        android:textSize="16sp"
+        android:paddingBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다음"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

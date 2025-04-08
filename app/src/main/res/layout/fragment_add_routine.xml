@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etRoutineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="루틴 이름" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="위치" />
+
+    <!-- 시작 시간 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etStartHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="시작 시 (예: 07)" />
+
+        <EditText
+            android:id="@+id/etStartMinute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="시작 분 (예: 00)" />
+    </LinearLayout>
+
+    <!-- 종료 시간 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etEndHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="종료 시 (예: 08)" />
+
+        <EditText
+            android:id="@+id/etEndMinute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="종료 분 (예: 00)" />
+    </LinearLayout>
+
+    <!-- 요일 선택 -->
+    <Spinner
+        android:id="@+id/spinnerDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/select_day_prompt" />
+
+    <Button
+        android:id="@+id/btnSaveRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnCancelRoutine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:textColor="@android:color/white" />
+</LinearLayout>

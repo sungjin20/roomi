@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/bg_night_sky">
+
+    <!-- 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/etSignUpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"/>
+
+    <EditText
+        android:id="@+id/etSignUpNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="닉네임"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"/>
+
+    <!-- 이메일 입력 -->
+    <EditText
+        android:id="@+id/etSignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"/>
+
+    <!-- 비밀번호 입력 -->
+    <EditText
+        android:id="@+id/etSignUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"
+        android:inputType="textPassword"/>
+
+    <!-- 비밀번호 확인 -->
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 확인"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/etSignUpAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="나이"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"/>
+
+    <EditText
+        android:id="@+id/etSignUpSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="성별"
+        android:background="@drawable/edittext_background"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"/>
+
+    <!-- 회원가입 버튼 -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:backgroundTint="@color/purple"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"/>
+
+    <!-- 로그인 화면으로 이동 -->
+    <TextView
+        android:id="@+id/tvGoToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이미 계정이 있나요? 로그인하기"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:paddingTop="10dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

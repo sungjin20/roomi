@@ -1,0 +1,10 @@
+<resources>
+    <style name="DayButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#8A2BE2</item>
+        <item name="android:padding">8dp</item>
+    </style>
+</resources>
