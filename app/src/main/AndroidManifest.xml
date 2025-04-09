@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,9 +32,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".SleepTypeIntroActivity"/>
         <activity android:name=".RoutineIntroActivity" />
         <activity android:name=".SleepSurveyActivity"/>
+        <activity android:name=".ChatRoomListActivity" />
+        <activity android:name=".ChatActivity_admin" />
 
         <service
             android:name=".RoutineNotificationService"

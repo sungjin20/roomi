@@ -23,10 +23,16 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private ProgressDialog progressDialog;
 
+    // adminUid는 onCreate에서 초기화
+    private String adminUid;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // ⚠️ 반드시 context가 붙은 이후에 getString 호출해야 함!
+        adminUid = getString(R.string.admin_uid);
 
         etEmail = findViewById(R.id.etId);
         etPassword = findViewById(R.id.etPassword);
@@ -36,10 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         progressDialog = new ProgressDialog(this);
 
-        // 로그인 버튼 클릭 이벤트
         btnLogin.setOnClickListener(v -> loginUser());
 
-        // 회원가입 버튼 클릭 이벤트
         Button btnSignUp = findViewById(R.id.btnSignUp);
         btnSignUp.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
@@ -68,13 +72,20 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
                     progressDialog.dismiss();
                     if (task.isSuccessful()) {
-                        // 로그인 성공 시 항상 자동 로그인 설정
                         SharedPreferences prefs = getSharedPreferences("login_prefs", MODE_PRIVATE);
                         prefs.edit().putBoolean("stay_logged_in", true).apply();
 
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user != null) {
-                            checkFirstLogin(user.getUid()); // 로그인 성공 후 is_first_login 확인
+                            String uid = user.getUid();
+
+                            if (uid.equals(adminUid)) {
+                                Intent intent = new Intent(LoginActivity.this, ChatRoomListActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                checkFirstLogin(uid);
+                            }
                         }
                     } else {
                         Toast.makeText(LoginActivity.this, "로그인 실패: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -83,7 +94,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void checkFirstLogin(String userId) {
-        DocumentReference userRef = db.collection("data").document(userId).collection("user_info").document(userId);
+        DocumentReference userRef = db.collection("data").document(userId)
+                .collection("user_info").document(userId);
 
         userRef.get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists() && documentSnapshot.contains("is_first_login")) {

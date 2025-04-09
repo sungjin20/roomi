@@ -10,4 +10,5 @@
         <item>Sat</item>
     </string-array>
     <string name="select_day_prompt">요일 선택</string>
+    <string name="admin_uid">HRI6nVWs2UhNMv1zRpuz8YaNMTF2</string>
 </resources>

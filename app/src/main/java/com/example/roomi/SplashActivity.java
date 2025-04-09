@@ -35,11 +35,14 @@ public class SplashActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<String[]> multiplePermissionsLauncher;
     private boolean shouldCheckExactAlarmAgain = false;
+    private String adminUid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        adminUid = getString(R.string.admin_uid);
 
         multiplePermissionsLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestMultiplePermissions(),
@@ -162,10 +165,17 @@ public class SplashActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (stayLoggedIn && currentUser != null) {
-            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            String uid = currentUser.getUid();
+            // 관리자의 UID 확인
+            if (uid.equals(adminUid)) {  // 관리자 UID로 변경하세요
+                startActivity(new Intent(SplashActivity.this, ChatRoomListActivity.class));
+            } else {
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            }
         } else {
             startActivity(new Intent(SplashActivity.this, LoginActivity.class));
         }
         finish();
     }
+
 }

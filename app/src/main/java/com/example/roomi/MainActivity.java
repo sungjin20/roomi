@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new AllroutineFragment();
             } else if (item.getItemId() == R.id.nav_setting) {
                 selectedFragment = new SettingFragment();
+            } else if (item.getItemId() == R.id.nav_chat) {
+                selectedFragment = new ChatFragment();
             }
 
             if (selectedFragment != null) {
